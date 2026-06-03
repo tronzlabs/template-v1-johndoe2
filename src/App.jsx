@@ -11,6 +11,7 @@ import Process from './components/Process'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import StartProjectOverlay from './components/StartProjectOverlay'
 
 export default function App() {
   useSmoothScroll()
@@ -34,6 +35,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <StartProjectOverlay />
     </>
   )
 }

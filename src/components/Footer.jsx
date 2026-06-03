@@ -1,5 +1,6 @@
 import { profile } from '../data/content'
 import Marquee from './ui/Marquee'
+import TronzlabsAttribution from './ui/TronzlabsAttribution'
 
 const socials = [
   { label: 'GitHub', href: profile.socials.github },
@@ -60,15 +61,24 @@ export default function Footer() {
         </nav>
       </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col gap-2 border-t border-sand/10 px-5 py-6 text-xs text-sand/40 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-        <span>© {year} {profile.name}. All rights reserved.</span>
-        <span className="flex items-center gap-2">
-          Crafted with React, GSAP &amp; a lot of care
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-red" />
+      <div className="mx-auto flex max-w-6xl flex-col gap-4 border-t border-sand/10 px-5 py-6 text-xs text-sand/40 sm:gap-5 sm:px-6 md:flex-row md:items-center md:justify-between">
+        <span className="text-center md:text-left">
+          © {year} {profile.name}. All rights reserved.
         </span>
-        <a href="#top" data-cursor="hover" className="transition-colors hover:text-sand">
-          Back to top ↑
-        </a>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center md:justify-end md:gap-6">
+          <TronzlabsAttribution />
+          <span className="hidden items-center gap-2 text-sand/40 sm:inline-flex">
+            Crafted with React, GSAP &amp; a lot of care
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-red" />
+          </span>
+          <a
+            href="#top"
+            data-cursor="hover"
+            className="transition-colors hover:text-sand whitespace-nowrap"
+          >
+            Back to top ↑
+          </a>
+        </div>
       </div>
     </footer>
   )
